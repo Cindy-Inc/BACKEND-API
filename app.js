@@ -18,6 +18,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api/empresa', empresa);
 app.use('/api/mensagem', mensagem);
 
+app.use(function(req, res, next) {
+    res.status(404).send({errorMessage: true, message: 'Not Found'});
+});  
+
 app.listen(port, () => {
     console.log(`Server started on port: ${port}`);
 });
