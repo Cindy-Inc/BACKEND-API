@@ -1,10 +1,10 @@
 'use strict';
 
 const express = require('express');
-const controller = require('./empresa.controller');
+const controller = require('./estabelecimento.controller');
 
-const empresa = express.Router();
+const estabelecimento = express.Router();
 
-empresa.post('/', controller.saveEmpresa);
+estabelecimento.post('/', controller.saveEstabelecimento);
 
-module.exports = { empresa };
+module.exports = { estabelecimento };
