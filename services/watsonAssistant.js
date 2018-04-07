@@ -1,3 +1,5 @@
+'use-strict';
+
 const WatsonAssistant = require('watson-developer-cloud');
 
 const watsonAssistant = WatsonAssistant.conversation({

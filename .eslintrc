@@ -46,7 +46,10 @@
         ],
         "arrow-body-style": [
             "error",
-            "always"
+            "as-neded",
+            {
+                "requireReturnForObjectLiteral": true
+            }
         ],
         "no-param-reassign": [
             "error",

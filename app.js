@@ -6,6 +6,7 @@ const app = require('express')();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
+const logger = require('./logger/index');
 const { empresa } = require('./routes/empresa/index');
 const { mensagem } = require('./routes/mensagem/index');
 
@@ -23,6 +24,6 @@ app.use((req, res, next) => {
 });
 
 app.listen(process.env.PORT, () => {
-    console.log(`Server started on port: ${process.env.PORT}`);
+    logger.info(`Server is running on port: ${process.env.PORT}`);
 });
 
