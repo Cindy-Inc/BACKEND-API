@@ -1,7 +1,7 @@
 'use strict';
 
-const saveEmpresa = (req, res) => {
-    res.send({ errorMessage: false, message: 'Empresa work\'s' });
+const saveEstabelecimento = (req, res) => {
+    res.send({ errorMessage: false, message: 'Estabelecimento work\'s' });
 };
 
-module.exports = { saveEmpresa };
+module.exports = { saveEstabelecimento };
