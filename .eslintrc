@@ -44,6 +44,16 @@
                 ]
             }
         ],
+        "arrow-body-style": [
+            "error",
+            "always"
+        ],
+        "no-param-reassign": [
+            "error",
+            {
+                "props": false
+            }
+        ],
         "strict": "off"
     }
 }
