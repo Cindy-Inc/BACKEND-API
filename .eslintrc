@@ -46,7 +46,7 @@
         ],
         "arrow-body-style": [
             "error",
-            "as-neded",
+            "as-needed",
             {
                 "requireReturnForObjectLiteral": true
             }
@@ -55,6 +55,17 @@
             "error",
             {
                 "props": false
+            }
+        ],
+        "no-console": [
+            "error",
+            {
+                "allow": [
+                    "warn",
+                    "error",
+                    "info",
+                    "debug"
+                ]
             }
         ],
         "strict": "off"

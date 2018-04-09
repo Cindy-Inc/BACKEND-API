@@ -21,6 +21,10 @@ const EstabelecimentoSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    complement: {
+        type: String,
+        required: false
+    },
     zip: {
         type: String,
         required: true
@@ -37,6 +41,10 @@ const EstabelecimentoSchema = new mongoose.Schema({
         type: String,
         required: true,
         minlength: 8
+    },
+    cnpj: {
+        type: String,
+        required: true
     }
 });
 
