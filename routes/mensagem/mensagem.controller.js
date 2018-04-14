@@ -11,7 +11,6 @@ const receiveMessage = (req, res) => {
     }).catch((e) => {
         res.status(400).send(e);
     });
-    res.send({ errorMessage: false, message: 'Mensagem work\'s' });
 };
 
 module.exports = { receiveMessage };

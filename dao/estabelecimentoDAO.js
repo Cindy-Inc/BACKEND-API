@@ -1,6 +1,7 @@
 'use strict';
 
 const mongoose = require('mongoose');
+const validator = require('validator');
 
 const Schema = mongoose.SchemaTypes;
 
@@ -15,7 +16,11 @@ const EstabelecimentoSchema = new mongoose.Schema({
     },
     type: {
         type: String,
-        required: true
+        required: true,
+        validate: [{
+            validator: validator.isAlpha,
+            message: '{VALUE} must contain only letters.'
+        }]
     },
     address: {
         type: String,
@@ -31,7 +36,9 @@ const EstabelecimentoSchema = new mongoose.Schema({
     },
     state: {
         type: String,
-        required: true
+        required: true,
+        maxlength: 2,
+        minlength: 2
     },
     city: {
         type: String,

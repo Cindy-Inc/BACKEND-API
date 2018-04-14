@@ -40,7 +40,8 @@
             "error",
             {
                 "allow": [
-                    "_id"
+                    "_id",
+                    "_user"
                 ]
             }
         ],
@@ -68,6 +69,7 @@
                 ]
             }
         ],
+        "consistent-return": "off",
         "strict": "off"
     }
 }

@@ -1,18 +1,18 @@
 'use-strict';
 
-const WatsonAssistant = require('watson-developer-cloud');
+const AssistantV1 = require('watson-developer-cloud/assistant/v1');
 
-const watsonAssistant = WatsonAssistant.conversation({
-    username: process.env.CONV_USER,
-    password: process.env.CONV_PASS,
-    version: 'v1',
-    version_date: '2017-04-04'
+const assistant = new AssistantV1({
+    username: '<username>',
+    password: '<password>',
+    url: 'https://gateway.watsonplatform.net/assistant/api/',
+    version: '2018-02-16'
 });
 
 const assistantMessage = (payload) => {
-    payload.workspace_id = process.env.CONV_WORK;
+    payload.workspace_id = '<workspace_id>';
     return new Promise((resolve, reject) => {
-        watsonAssistant.message(payload, (err, res) => {
+        assistant.message(payload, (err, res) => {
             if (err) reject(err);
             resolve(res);
         });
