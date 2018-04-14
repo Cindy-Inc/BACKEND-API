@@ -5,7 +5,6 @@ const { ObjectID } = require('mongodb');
 const { Estabelecimento } = require('./../../dao/estabelecimentoDAO');
 
 const saveEstabelecimento = (req, res) => {
-    res.send({ errorMessage: false, message: 'Estabelecimento work\'s' });
     let body = _.pick(req.body, ['_user', 'name', 'type', 'address', 'complement',
         'zip', 'state', 'city', 'phone', 'cnpj']);
 
