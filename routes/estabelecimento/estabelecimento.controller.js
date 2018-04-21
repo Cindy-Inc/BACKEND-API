@@ -2,10 +2,10 @@
 
 const _ = require('lodash');
 const { ObjectID } = require('mongodb');
-const { Estabelecimento } = require('./../../dao/estabelecimentoDAO');
+const { Estabelecimento } = require('./../../models/estabelecimento.model');
 
 const saveEstabelecimento = (req, res) => {
-    const body = _.pick(req.body, ['_user', 'name', 'type', 'address', 'complement',
+    const body = _.pick(req.body, ['_user', 'name', 'type', 'address', 'number', 'complement',
         'zip', 'state', 'city', 'phone', 'cnpj']);
 
     if (!ObjectID.isValid(body._user)) {
@@ -13,9 +13,8 @@ const saveEstabelecimento = (req, res) => {
     }
 
     const estabelecimento = new Estabelecimento(body);
-
-    estabelecimento.save().then((user) => {
-        res.send(user);
+    estabelecimento.save().then((estab) => {
+        res.send(estab);
     }).catch((e) => {
         res.status(400).send(e);
     });

@@ -2,6 +2,7 @@
 
 const mongoose = require('mongoose');
 const validator = require('validator');
+const _ = require('lodash');
 
 const Schema = mongoose.SchemaTypes;
 
@@ -26,6 +27,10 @@ const EstabelecimentoSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    number: {
+        type: String,
+        required: true
+    },
     complement: {
         type: String,
         required: false
@@ -37,8 +42,7 @@ const EstabelecimentoSchema = new mongoose.Schema({
     state: {
         type: String,
         required: true,
-        maxlength: 2,
-        minlength: 2
+        maxlength: 2
     },
     city: {
         type: String,
@@ -55,6 +59,12 @@ const EstabelecimentoSchema = new mongoose.Schema({
     }
 });
 
+EstabelecimentoSchema.methods.toJSON = function () {
+    const estabelecimento = this;
+    const estabObject = estabelecimento.toObject();
+
+    return _.pick(estabObject, ['_id', 'name']);
+};
 
 const Estabelecimento = mongoose.model('Estabelecimento', EstabelecimentoSchema);
 

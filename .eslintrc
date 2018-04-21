@@ -65,9 +65,14 @@
                     "warn",
                     "error",
                     "info",
-                    "debug"
+                    "debug",
+                    "log"
                 ]
             }
+        ],
+        "func-names": [
+            "error",
+            "never"
         ],
         "consistent-return": "off",
         "strict": "off"
