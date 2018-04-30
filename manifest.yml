@@ -3,6 +3,6 @@ applications:
   memory: 128M
   instances: 1
   domain: mybluemix.net
-  host: 'cindy-app-test'
-  name: '[Cindy] - Toolchain Test'
+  host: 'stage-cindy-app'
+  name: '[Cindy] - BACKEND'
   disk_quota: 256M
