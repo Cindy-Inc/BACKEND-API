@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "dev": "\"npm run lint\" & nodemon app.js",
-    "lint": "eslint **/*.js"
+    "lint": "eslint **/*.js",
+    "test": "mocha test --recursive"
   },
   "repository": {
     "type": "git",
