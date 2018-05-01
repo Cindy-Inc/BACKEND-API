@@ -3,9 +3,9 @@
 // const expect = require('expect');
 // const request = require('supertest');
 
-describe('My Test', function() {
-    it('should ...', (done) => {
-        // done();
+describe('My Test', () => {
+    it('should do some test.', (done) => {
+        done();
     });
 });
 
