@@ -23,15 +23,15 @@ app.use('/api/commonUser', commonUser);
 app.use('/api/companyUser', companyUser);
 
 app.use((req, res, next) => {
-    res.status(404).send({ error: true, message: 'Not Found' });
+  res.status(404).send({ error: true, message: 'Not Found' });
 });
 
 app.use((err, req, res, next) => {
-    if (req.timedout === true) {
-        res.send(500, { error: true, message: 'Internal Server Error! Try again Later' });
-    } else {
-        next();
-    }
+  if (req.timedout === true) {
+    res.send(500, { error: true, message: 'Internal Server Error! Try again Later' });
+  } else {
+    next();
+  }
 });
 
 module.exports = app;

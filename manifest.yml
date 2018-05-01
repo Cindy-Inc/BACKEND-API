@@ -4,5 +4,5 @@ applications:
   instances: 1
   domain: mybluemix.net
   host: 'cindy-app'
-  name: '[Cindy] - BACKEND'
+  name: 'cindy-app'
   disk_quota: 256M
