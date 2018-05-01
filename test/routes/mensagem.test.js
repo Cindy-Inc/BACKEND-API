@@ -4,7 +4,7 @@
 // const request = require('supertest');
 
 describe('My Test', () => {
-    it('should ...', (done) => {
+    it('should do some test.', (done) => {
         done();
     });
 });
