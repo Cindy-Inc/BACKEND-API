@@ -1,80 +1,54 @@
 {
-    "extends": "airbnb",
-    "parserOptions": {
-        "ecmaVersion": 6
-    },
-    "env": {
-        "node": true,
-        "es6": true,
-        "browser": true,
-        "mocha": true
-    },
-    "rules": {
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
-        "indent": [
-            "error",
-            4
-        ],
-        "comma-dangle": [
-            "error",
-            "never"
-        ],
-        "no-unused-vars": [
-            "error",
-            {
-                "vars": "local",
-                "args": "none"
-            }
-        ],
-        "brace-style": [
-            "error",
-            "1tbs",
-            {
-                "allowSingleLine": true
-            }
-        ],
-        "no-underscore-dangle": [
-            "error",
-            {
-                "allow": [
-                    "_id",
-                    "_user"
-                ]
-            }
-        ],
-        "arrow-body-style": [
-            "error",
-            "as-needed",
-            {
-                "requireReturnForObjectLiteral": true
-            }
-        ],
-        "no-param-reassign": [
-            "error",
-            {
-                "props": false
-            }
-        ],
-        "no-console": [
-            "error",
-            {
-                "allow": [
-                    "warn",
-                    "error",
-                    "info",
-                    "debug",
-                    "log"
-                ]
-            }
-        ],
-        "func-names": [
-            "error",
-            "never"
-        ],
-        "consistent-return": "off",
-        "strict": "off"
-    }
+  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true,
+    "mocha": true
+  },
+  "rules": {
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "local",
+        "args": "none"
+      }
+    ],
+    "func-names": [
+      "error",
+      "never"
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "brace-style": [
+      "error",
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "_id",
+          "_user"
+        ]
+      }
+    ],
+    "consistent-return": "off",
+    "no-console": "off",
+    "strict": "off"
+  }
 }
