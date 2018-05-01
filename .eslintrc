@@ -38,15 +38,7 @@
         "allowSingleLine": true
       }
     ],
-    "no-underscore-dangle": [
-      "error",
-      {
-        "allow": [
-          "_id",
-          "_user"
-        ]
-      }
-    ],
+    "no-underscore-dangle": "off",
     "consistent-return": "off",
     "no-console": "off",
     "strict": "off"
