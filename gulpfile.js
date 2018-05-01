@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const mocha = require('gulp-mocha');
 
-gulp.task('mocha-test', () => {
+gulp.task('mocha-test', function () {
     return gulp.src('test/*.js', { read: false })
         .pipe(mocha({
             globals: ['expect'],
