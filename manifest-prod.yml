@@ -6,4 +6,3 @@ applications:
   host: 'cindy-app'
   name: 'cindy-app'
   disk_quota: 256M
-  command: npm start
