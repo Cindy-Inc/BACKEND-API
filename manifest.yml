@@ -6,3 +6,5 @@ applications:
   host: 'cindy-app'
   name: 'cindy-app'
   disk_quota: 256M
+  env:
+    NODE_ENV: development
