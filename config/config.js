@@ -1,11 +1,11 @@
 'use-strict';
 
-const env = process.env.NODE_ENV || 'development';
+const env = process.env.NODE_ENV || 'dev';
 
-
-if (env === 'development') {
-  process.env.PORT = process.env.PORT || 3000;
+if (env === 'dev') {
+  process.env.PORT = 3000;
   process.env.MONGODB_URI = 'mongodb://localhost:27017/cindy';
+} else if (env === 'development') {
   process.env.ASST_USER = 'b428669e-3c26-4d12-9827-3ca2675ba251';
   process.env.ASST_PASS = '2rSJYPUuAD5D';
   process.env.ASST_URL = 'https://gateway.watsonplatform.net/assistant/api/';
