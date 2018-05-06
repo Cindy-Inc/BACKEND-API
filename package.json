@@ -5,7 +5,6 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "start-dev": "NODE_ENV=development node app.js",
     "dev": "\"npm run lint\" & nodemon app.js",
     "lint": "eslint **/*.js",
     "test": "mocha test --recursive"
