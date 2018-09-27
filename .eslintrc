@@ -25,12 +25,6 @@
       "error",
       "never"
     ],
-    "no-param-reassign": [
-      "error",
-      {
-        "props": false
-      }
-    ],
     "brace-style": [
       "error",
       "1tbs",
@@ -38,8 +32,12 @@
         "allowSingleLine": true
       }
     ],
+    "no-param-reassign": "off",
+    "prefer-promise-reject-errors": "off",
+    "prefer-destructuring": "off",
     "no-underscore-dangle": "off",
     "consistent-return": "off",
+    "arrow-body-style": "off",
     "no-console": "off",
     "strict": "off"
   }

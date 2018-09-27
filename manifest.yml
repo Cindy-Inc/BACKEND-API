@@ -1,10 +1,11 @@
 applications:
 - path: .
-  memory: 128M
+  memory: 512M
   instances: 1
   domain: mybluemix.net
-  host: 'cindy-app'
-  name: 'cindy-app'
-  disk_quota: 256M
-  env:
-    NODE_ENV: development
+  host: 'cognitive-app'
+  name: 'cognitive-app'
+  disk_quota: 1G
+  command: npm start
+  # env:
+    # NODE_ENV: development
