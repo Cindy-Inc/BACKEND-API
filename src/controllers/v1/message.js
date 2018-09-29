@@ -15,7 +15,7 @@ module.exports.message = (req, res, next) => {
     input: {
       text: body.text
     },
-    context
+    context: body.context ? body.context : {}
   }).then((answer) => {
     objReturn.success = true;
     objReturn.response = watsonAnswer.output;
