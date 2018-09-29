@@ -33,8 +33,7 @@ const EstablishmentSchema = new mongoose.Schema({
     required: true
   },
   complement: {
-    type: String,
-    required: true
+    type: String
   },
   zip: {
     index: String,
@@ -43,6 +42,12 @@ const EstablishmentSchema = new mongoose.Schema({
   state: {
     type: String,
     required: true
+  },
+  latitude: {
+    type: String
+  },
+  longitude: {
+    type: String
   },
   city: {
     type: String,

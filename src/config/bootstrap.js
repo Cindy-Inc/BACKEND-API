@@ -7,7 +7,13 @@ User.findOne({ username: 'admin' }).then((user) => {
       email: 'admin@cindy.co',
       level: 3,
       password: 'admin@cindy',
-      username: 'admin'
+      username: 'admin',
+      type: 'admin',
+      address: 'Av. Lins de Vasconcelos',
+      number: '1157',
+      city: 'São Paulo',
+      state:'SP',
+      phone: '00000000'
     };
     const userAdmin = new User(admin);
     userAdmin.save();

@@ -29,8 +29,8 @@ const UserSchema = new mongoose.Schema({
       message: '{VALUE} is not a valid email'
     }
   },
-  level: {
-    type: Number,
+  type: {
+    type: String,
     required: true
   },
   active: {
@@ -42,13 +42,31 @@ const UserSchema = new mongoose.Schema({
     required: true,
     minlength: 4
   },
-  username: {
+  address: {
     type: String,
     required: true,
-    trim: true,
-    unique: true,
-    minlength: 1,
-    lowercase: true
+  },
+  number: {
+    type: String,
+    required: true
+  },
+  complement: {
+    type: String
+  },
+  zip: {
+    index: String
+  },
+  state: {
+    type: String,
+    required: true
+  },
+  city: {
+    type: String,
+    required: true
+  },
+  phone: {
+    type: String,
+    required: true
   }
 }, { collection: 'user' });
 
@@ -56,7 +74,8 @@ UserSchema.methods.toJSON = function () {
   const user = this;
   const userObject = user.toObject();
 
-  return _.pick(userObject, ['_id', 'email', 'username', 'name', 'level', 'active']);
+  return _.pick(userObject, ['_id', 'email', 'username', 'name', 'level', 'active', 'type',
+    'address', 'number', 'complement', 'zip', 'state', 'city', 'phone']);
 };
 
 UserSchema.statics.findByCredentials = function (username, password) {

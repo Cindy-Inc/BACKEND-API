@@ -29,6 +29,9 @@ const HistorySchema = new mongoose.Schema({
   intents: {
     type: Object
   },
+  context:{
+    type: Object
+  },
   feedback: {
     type: Boolean,
     default: false
@@ -44,8 +47,7 @@ const HistorySchema = new mongoose.Schema({
   },
   username: {
     index: true,
-    type: String,
-    default: 'unknown@unknown.com'
+    type: String
   },
   reviewed: {
     type: Boolean,
