@@ -6,7 +6,8 @@ const { User } = require('../../models/v1/user');
 
 module.exports.save = (req, res, next) => {
   const objReturn = {};
-  const body = _.pick(req.body, ['name', 'email', 'level', 'active', 'password', 'username']);
+  const body = _.pick(req.body, ['email', 'username', 'name', 'level', 'active', 'type',
+  'address', 'number', 'complement', 'zip', 'state', 'city', 'phone', 'password']);
 
   const user = new User(body);
 

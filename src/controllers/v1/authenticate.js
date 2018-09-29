@@ -11,9 +11,7 @@ module.exports.authenticate = (req, res, next) => {
   const password = req.body.password;
 
   User.findByCredentials(username, password).then((user) => {
-    const token = jwt.sign(_.pick(user, ['_id', 'email', 'username', 'name', 'level', 'active']), process.env.SECRET, {
-      expiresIn: 28800
-    });
+    const token = jwt.sign(_.pick(user, ['_id', 'email', 'username', 'name', 'level', 'active']), process.env.SECRET);
 
     objReturn.success = true;
     objReturn.response = {
