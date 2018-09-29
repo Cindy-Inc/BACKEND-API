@@ -36,7 +36,7 @@ const EstablishmentSchema = new mongoose.Schema({
     type: String
   },
   zip: {
-    index: String,
+    type: String,
     required: true
   },
   state: {
