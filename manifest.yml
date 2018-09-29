@@ -3,8 +3,8 @@ applications:
   memory: 128M
   instances: 1
   domain: mybluemix.net
-  host: 'cognitive-app'
-  name: 'cognitive-app'
+  host: '3cindy-app'
+  name: '3cindy-app'
   disk_quota: 1G
   command: npm start
   env:

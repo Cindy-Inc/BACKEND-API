@@ -81,7 +81,7 @@ UserSchema.methods.toJSON = function () {
 UserSchema.statics.findByCredentials = function (username, password) {
   const User = this;
 
-  return User.findOne({ username }).then((user) => {
+  return User.findOne({ email: username }).then((user) => {
     if (!user) {
       return Promise.reject({ message: 'user not found' });
     }
