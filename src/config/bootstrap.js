@@ -6,7 +6,7 @@ User.findOne({ email: 'admin@cindy.co' }).then((user) => {
       name: 'CINDY',
       email: 'admin@cindy.co',
       password: 'admin@cindy',
-      type: 'admin',
+      type: 'usuario',
       address: 'Av. Lins de Vasconcelos',
       number: '1157',
       city: 'São Paulo',
