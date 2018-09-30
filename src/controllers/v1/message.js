@@ -34,7 +34,7 @@ module.exports.message = (req, res, next) => {
     } else if (watsonAnswer.output.buscarLojas) {
       watsonAnswer.output.generic.push({ response_type: 'text', text: '<br>Habbibs<br>McDonalds<br>Hamburguinho<br>Pizzaria Poke' });
     }
-    action.then((answer) => {
+    action(watsonAnswer).then((answer) => {
       objReturn.success = true;
       objReturn.response = answer;
       return res.status(httpStatus.OK).json(objReturn);
@@ -55,6 +55,7 @@ function action(watsonAnswer) {
         order: watsonAnswer.context.pedidos
       });
       order.save().then((order) => {
+        console.log(order);
         watsonAnswer.output.generic[0].text.replace('&&&', 'c8273hc782');
         resolve(watsonAnswer);
       });
