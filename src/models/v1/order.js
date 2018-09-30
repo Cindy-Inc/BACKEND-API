@@ -18,8 +18,7 @@ const OrderSchema = new mongoose.Schema({
   },
   _establishment: {
     index: true,
-    type: Schema.ObjectId,
-    required: true
+    type: Schema.ObjectId
   },
   order_number: {
     type: String,

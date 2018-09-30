@@ -11,7 +11,9 @@ module.exports.message = (credentials, payload) => {
   });
 
   payload.alternate_intents = true;
-  payload.input.text = payload.input.text.replace(/\r|\n|\r|\t|\s+/g, '').trim();
+  if (payload.input.text) {
+    payload.input.text = payload.input.text.replace(/\r|\n|\r|\t/g, '').trim();
+  }
   return new Promise((resolve, reject) => {
     assistant.message(payload, (err, res) => {
       if (err) reject({ err, message: 'assistant.message error' });
