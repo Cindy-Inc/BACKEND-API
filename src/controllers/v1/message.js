@@ -55,7 +55,6 @@ function action(watsonAnswer) {
         order: watsonAnswer.context.pedidos
       });
       order.save().then((order) => {
-        console.log(order);
         watsonAnswer.output.generic[0].text = watsonAnswer.output.generic[0].text.replace('&&&', order.order_number);
         resolve(watsonAnswer);
       });

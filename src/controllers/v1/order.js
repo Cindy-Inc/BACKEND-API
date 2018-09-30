@@ -22,7 +22,7 @@ module.exports.save = (req, res, next) => {
   });
 };
 
-module.exports.list = (req, res, next) => {
+module.exports.list = (req, res, next) => {``
   const objReturn = {};
 
   Order.find().then((documents) => {
